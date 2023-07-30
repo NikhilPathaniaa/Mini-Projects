@@ -1,0 +1,13 @@
+body{
+    background-color: pink;
+}
+.container{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    height: 590px;
+    width: 590px;
+    display: flex;
+    justify-content: center;
+    background-color:  darkgray;
+}
