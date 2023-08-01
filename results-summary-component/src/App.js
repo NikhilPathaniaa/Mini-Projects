@@ -5,8 +5,11 @@ export default function App(){
   const [items] = useState(data);
 
   return (
-    <section>
-      <div className="bg-indigo-500 p-8 text-center text-white rounded-b-3xl">
+    <div>
+      <section className="md:flex md:items-center md:justify-center
+                        md:h-screen md:max-w-3xl md:mx-auto bg-white shadow">
+      <div className="bg-indigo-500 p-8 text-center text-white 
+                      rounded-b-3xl md:flex-1">
         <p className="mb-6">Your Result</p>
         <div className="flex items-center justify-center">
           <p className="bg-indigo-600 w-24 h-24 flex flex-col items-center 
@@ -20,7 +23,7 @@ export default function App(){
         <p>You scored higher than 65% of the people who have taken these tests.</p>
       </div>
 
-      <div className="p-8 ">
+      <div className="p-8 md:flex-1">
         <h2 className="text-slate-700 mb-6 text-lg font-bold">Summary</h2>
 
         <div className="flex flex-col gap-4">
@@ -50,8 +53,13 @@ export default function App(){
             ))}
           </div>
 
-        <button>Continue</button>
+        <button className="bg-slate-700 py-4 px-6 rounded-full 
+                            text-white w-full mt-6 hover:bg-indigo-600 
+                            transition- all duration-200">
+          Continue
+        </button>
       </div>
     </section>
+    </div>
   );
 }
