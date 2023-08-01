@@ -1,37 +1,38 @@
-import { useState } from "react";  
+import { useState } from "react";
 import data from "./data.json";
 
-export default function App(){
+export default function App() {
   const [items] = useState(data);
 
   return (
-    <div>
-      <section className="md:flex md:items-center md:justify-center
-                        md:h-screen md:max-w-3xl md:mx-auto bg-white shadow">
-      <div className="bg-indigo-500 p-8 text-center text-white 
-                      rounded-b-3xl md:flex-1">
-        <p className="mb-6">Your Result</p>
-        <div className="flex items-center justify-center">
-          <p className="bg-indigo-600 w-24 h-24 flex flex-col items-center 
-                        justify-center gap-1 rounded-full 
-                        text-white text-3xl font-bold">
-            76<p className="text-slate-200 text-base font-normal">of 100</p>
+    <div className="md:flex md:items-center md:justify-center md:h-screen md:max-w-2xl md:mx-auto">
+      <section className="md:flex bg-white shadow rounded-3xl">
+        <div className="bg-div p-8 md:pt-10 text-center text-white rounded-b-3xl md:flex-1 md:rounded-3xl md:flex md:flex-col md:items-center md:justify-center">
+          <p className="mb-6">Your Result</p>
+
+          <div className="flex items-center justify-center">
+            <p className="bg-circle w-24 h-24 md:w-40 md:h-40 flex flex-col items-center justify-center gap-1 rounded-full text-white text-3xl md:text-6xl font-bold">
+              76 <p className="text-slate-200 text-base font-normal">of 100</p>
+            </p>
+          </div>
+
+          <h2 className="my-6 text-white font-bold text-lg md:text-2xl">
+            Great
+          </h2>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
 
-        <h2 className="my-6">Great</h2>
-        <p>You scored higher than 65% of the people who have taken these tests.</p>
-      </div>
+        <div className="p-8 md:flex-1">
+          <h2 className="text-slate-700 mb-6 text-lg font-bold">Summary</h2>
 
-      <div className="p-8 md:flex-1">
-        <h2 className="text-slate-700 mb-6 text-lg font-bold">Summary</h2>
-
-        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             {items.map((item, index) => (
               <div
                 key={index}
                 style={{
-                  backgroundColor: `${item.color}15`,
+                  backgroundColor: `${item.color}10`,
                 }}
                 className="flex items-center justify-between p-4 rounded-lg"
               >
@@ -53,13 +54,11 @@ export default function App(){
             ))}
           </div>
 
-        <button className="bg-slate-700 py-4 px-6 rounded-full 
-                            text-white w-full mt-6 hover:bg-indigo-600 
-                            transition- all duration-200">
-          Continue
-        </button>
-      </div>
-    </section>
+          <button className="bg-slate-700 py-4 px-6 rounded-full text-white w-full mt-6 hover:bg-indigo-600 transition-all duration-200">
+            Continue
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
