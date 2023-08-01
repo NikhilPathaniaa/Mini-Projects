@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
+
+    <script>
+        function copyForm(){
+            document.querySelectorAll(()=>{
+
+                console.log("HEllo");
+            })
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <form>
             <h2><center>User Registration form</center></h2>
-            
+
             <!-- Name -->
             <label for="">Name :</label>
             <input type="text" id="name" placeholder="your name"><br><br>
@@ -22,6 +31,8 @@
             <!-- Password -->
             <label for="">Password :</label>
             <input type="password" id="password" placeholder="PASSWORD"><br><br>
+
+            <input onclick="copyForm" type="submit" id="submit" value="submit">    
             
             <!-- Phone number
             <label for="">Phone Number :</label>
