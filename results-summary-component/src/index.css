@@ -7,3 +7,6 @@
 *{
   font-family: "Hanken Grotesk", sans-serif;
 }
+p{
+  @apply text-slate-200;
+}
