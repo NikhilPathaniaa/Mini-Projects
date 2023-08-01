@@ -1,6 +1,8 @@
 # Frontend Mentor - Results summary component
 
 ![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
+This is an overview design with mobile view as well
+(./design/mobile-design.jpg)
 
 ## Welcome! 👋
 
