@@ -15,7 +15,27 @@ export default function App(){
       </div>
 
       <div>
-        {items.length} items
+        <h2>Summary</h2>
+
+        <div>
+          {items.map((item, index) => {
+            <div key={index} style={{
+              backgroundColor: item.color,
+            }}>
+              <h3>
+                <img src={item.icon} alt={item.category} />
+                {item.category}
+              </h3>
+
+              <p>
+                <span>{item.score}</span> / 100
+              </p>
+
+            </div>
+          })}
+        </div>
+
+        <button>Continue</button>
       </div>
     </section>
   );
