@@ -21,6 +21,7 @@ export default function App() {
           </h2>
           <p>
             You scored higher than 65% of the people who have taken these tests.
+            
           </p>
         </div>
 
@@ -36,6 +37,7 @@ export default function App() {
                 }}
                 className="flex items-center justify-between p-4 rounded-lg"
               >
+                
                 <h3
                   style={{
                     color: item.color,
